@@ -19,7 +19,7 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_gravity="center"
-      android:background="@color/white" >
+      android:background="@color/bpWhite" >
         <View
             android:id="@+id/center_view"
             android:layout_width="1dp"
@@ -47,12 +47,12 @@
             android:layout_marginLeft="@dimen/extra_time_label_margin"
             android:layout_marginRight="@dimen/extra_time_label_margin"
             android:layout_centerVertical="true" >
-            <com.doomonafireball.betterpickers.widget.AccessibleTextView
+            <com.codetroopers.betterpickers.widget.AccessibleTextView
                 android:id="@+id/hours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/time_placeholder"
-                android:textColor="@color/blue"
+                android:textColor="@color/bpBlue"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
                 style="@style/aosp_time_label" />
@@ -88,7 +88,7 @@
             android:layout_marginLeft="@dimen/extra_time_label_margin"
             android:layout_marginRight="@dimen/extra_time_label_margin"
             android:layout_centerVertical="true" >
-            <com.doomonafireball.betterpickers.widget.AccessibleTextView
+            <com.codetroopers.betterpickers.widget.AccessibleTextView
                 android:id="@+id/minutes"
                 style="@style/aosp_time_label"
                 android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                 android:text="@string/time_placeholder"
                 android:layout_gravity="center" />
         </FrameLayout>
-        <com.doomonafireball.betterpickers.widget.AccessibleTextView
+        <com.codetroopers.betterpickers.widget.AccessibleTextView
             android:id="@+id/ampm_hitspace"
             android:layout_width="@dimen/ampm_label_size"
             android:layout_height="wrap_content"

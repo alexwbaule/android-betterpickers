@@ -26,9 +26,9 @@
     <string name="year_c">ГОД</string>
 
     <!-- 1.3.1 -->
-    <string name="min_error">Пожалуйста, введите число больше или равно чем %1$d</string>
-    <string name="max_error">Пожалуйста, введите число меньше или равно чем %1$d</string>
-    <string name="min_max_error">Пожалуйста, введите число между %1$d и %2$d</string>
+    <string name="min_error">Пожалуйста, введите число больше или равно чем %1$s</string>
+    <string name="max_error">Пожалуйста, введите число меньше или равно чем %1$s</string>
+    <string name="min_max_error">Пожалуйста, введите число между %1$s и %2$s</string>
 
     <!-- From AOSP -->
     <!-- Label for button to confirm chosen date or time [CHAR LIMIT=30] -->
@@ -70,19 +70,6 @@
     <string name="item_is_selected">%1$s выбран</string>
     <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
     <string name="deleted_key">%1$s удален</string>
-
-    <!-- DO NOT TRANSLATE -->
-    <string name="time_placeholder">--</string>
-    <!-- DO NOT TRANSLATE -->
-    <string name="time_separator">:</string>
-
-    <!-- DO NOT TRANSLATE -->
-    <string name="radial_numbers_typeface">sans-serif</string>
-    <!-- DO NOT TRANSLATE -->
-    <string name="sans_serif">sans-serif</string>
-
-    <!-- DO NOT TRANSLATE -->
-    <string name="day_of_week_label_typeface">sans-serif</string>
 
     <!-- Repeat an monthly event on the same day of every month [CHAR LIMIT=20] -->
     <string name="recurrence_month_pattern_by_day">тот же день каждый месяц</string>

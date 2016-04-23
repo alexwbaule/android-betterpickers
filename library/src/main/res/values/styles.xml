@@ -71,9 +71,17 @@
     </style>
 
     <style name="aosp_day_of_week_label_condensed" />
+    <style name="Widget.Holo.Light.CompoundButton.Switch" parent="android:Widget.CompoundButton">
+        <item name="bpSwitchTextAppearance">@style/TextAppearance.Holo.Light.Widget.Switch</item>
+        <item name="bpTextOn">@string/switch_on</item>
+        <item name="bpTextOff">@string/switch_off</item>
+        <item name="bpThumbTextPadding">12dip</item>
+        <item name="bpSwitchMinWidth">96dip</item>
+        <item name="bpSwitchPadding">16dip</item>
+    </style>
     <style name="TextAppearance.Holo.Light.Widget.Switch" parent="android:TextAppearance.Small">
         <!-- Switch thumb asset presents a dark background. -->
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/bpWhite</item>
     </style>
 
     <style name="TextAppearance.RecurrencePickerStyle" parent="@android:style/TextAppearance">
@@ -111,5 +119,26 @@
     <style name="TextAppearance.EditEvent_SpinnerButton" parent="TextAppearance.EditEvent_Spinner">
         <item name="android:paddingLeft">12dp</item>
         <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="bp_ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/bp_material_button_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="bp_ActionButton.Text">
+        <item name="android:textSize">@dimen/bp_material_button_textsize</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/bp_material_button_background</item>
+        <item name="android:minWidth">@dimen/bp_material_button_minwidth</item>
+        <item name="android:paddingLeft">@dimen/bp_material_button_textpadding_horizontal</item>
+        <item name="android:paddingRight">@dimen/bp_material_button_textpadding_horizontal</item>
+        <item name="android:textColor">@color/bpBlue</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 </resources>

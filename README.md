@@ -1,151 +1,208 @@
-![BetterPickers Feature Graphic][5]
+[![Maven Central](https://img.shields.io/maven-central/v/com.code-troopers.betterpickers/library.svg?style=flat)](https://repo1.maven.org/maven2/com/code-troopers/betterpickers/library/)
+[![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Betterpickers-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/118)
+
+[![Built With Cloudbees](https://www.cloudbees.com/sites/default/files/styles/large/public/Button-Built-on-CB-1.png?itok=3Tnkun-C)](https://codetroopers.ci.cloudbees.com/job/betterpickers-master/)
+
+
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_calendar_date.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_radial_time.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_recurrence.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_time_zone.png" width="120">
+
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_date.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_expiration.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_hms.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_number.png" width="120">
+<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_time.png" width="120">
+
 
 DialogFragments modeled after the AOSP Clock and Calendar apps to improve UX for picking time, date, numbers, and other things.
 
 Try out the sample application on [Google Play][6].
 
-<a href="https://play.google.com/store/apps/details?id=com.doomonafireball.betterpickers.sample">
+<a href="https://play.google.com/store/apps/details?id=com.codetroopers.betterpickersapp">
   <img alt="BetterPickers Samples on Google Play"
-         src="http://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+         src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" width="140" />
 </a>
-
-Changelog
-=========
-***1.5.4***
-* Re-Added setMaxDate and SetMinDate from the AOSP DateTimePickers, and change it to disallow select date before or after this sets.
-
-***1.5.3***
-* BugFix to work with support library V21+
-
-**1.5.3**
-* allow proper use of appcompat 21
-* added a few translations
-* first release made from the new support team (Code-Troopers)
-
-**1.5.2**
-* Bugfix for Gradle resource processing Switch backport attrs.
-
-**1.5.1**
-* Package assets in library since we are now producing an .aar
-
-**1.5.0**
-* Package as an .aar
-* Add RecurrencePicker (from AOSP calendar app)
-* Add TimeZonePicker (from AOSP calendar app)
-* Resolve bold typeface errors on KitKat
-* Add dismiss listener for RadialTimePicker
-* Add option to set "Done" text for RadialTimePicker
-* Add Italian translations
-
-**1.4.2**
-* Fix the ordering of months in the DatePicker
-* Add header to DatePicker keyboards for better UX
-
-**1.4.1**
-* Fix pom.xml file in Maven Central due to an improper Gradle commit of 1.4.0 (Gradle is still a work-in-progress)
-
-**1.4.0**
-* Addition of ExpirationPicker for e.g. credit card expiration date
-* Addition of CalendarPicker from AOSP (see stock Calendar app) <a href="https://raw.github.com/derekbrameyer/android-betterpickers/master/sample/imagery/phone_render_calendar_date.png">[screenshot here]</a>
-* Addition of RadialTimePicker from AOSP (see stock Calendar app) <a href="https://raw.github.com/derekbrameyer/android-betterpickers/master/sample/imagery/phone_render_radial_time_picker.png">[screenshot here]</a>
-* Improved localization of months in DatePicker
-* Removed dependency on ViewPagerIndicator
-* Fix for Android 4.3 font rendering
-* Fix for year field of DatePicker when using e.g. year/month/day format
-
-**1.3.1**
-* Improve UX for min/max for NumberPicker
-* Added ListView demos to the sample app
-
-**1.3.0**
-* Add Catalan, Spanish
-* Enable min/max for NumberPicker
-* Added Javadoc comments
-* Added universal handlers
-* Added picker references
-* UX tweak for DatePicker indicator
-
-**1.2.0**
-* Removed some unused fonts from sample/ project
-* Refactor to Builder pattern
-* Fix for Gingerbread font in DatePicker
-* Added optional label text to NumberPicker
-* DatePicker reorders text and keyboards based on locale
-* NumberPicker scrolls horizontally to allow for more numbers
-
-**1.1.0**
-* Added HMS (hours:minutes:seconds) PickerFragment
-* Allow for PickerFragments within target fragments
-* Allow for February 29th input
 
 Including in Your Project
 =========================
+### Gradle
 
-Android-BetterPickers is presented as an [Android library project][7]. A
-standalone JAR is not possible due to the theming capabilities offered by the DialogFragments.
+```groovy
+compile 'com.code-troopers.betterpickers:library:2.5.3'
+```
 
-You can include this project by [referencing it as a library project][8] in
-Eclipse or ant.  Note that to use this library, both it and your project must be compiled with Android 4.0 (API level 14) or newer, similar to ActionBarSherlock.
-
-If you are a Maven user you can easily include the library by specifying it as
-a dependency:
+### Maven
 
 ```xml
 <dependency>
-  <groupId>com.doomonafireball.betterpickers</groupId>
+  <groupId>com.code-troopers.betterpickers</groupId>
   <artifactId>library</artifactId>
-  <version>1.5.3</version>
+  <version>2.5.3</version>
   <type>aar</type>
 </dependency>
 ```
-
-If you are a Gradle user you can also easily include the library:
-
-```groovy
-compile 'com.doomonafireball.betterpickers:library:1.5.3'
-```
-
-If you are bringing in the support library you may need to add an exclusion:
-
-```groovy
-compile ("com.doomonafireball.betterpickers:library:1.5.3") {
-    exclude group: 'com.android.support', module: 'support-v4'
-}
-```
-
-There is a standalone Gradle demo [here][14] that may also help.
 
 Usage
 =====
 
 *For a working implementation of this project see the `sample/` folder.*
 
-  1. Implement the appropriate Handler callbacks:
+### Calendar Date Picker
 
-  ```java
-  public class MyActivity extends Activity implements 
-    DatePickerDialogFragment.DatePickerDialogHandler {
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        CalendarDatePickerDialogFragment cdp = new CalendarDatePickerDialogFragment()
+                .setOnDateSetListener(SampleCalendarDateBasicUsage.this)
+                .setFirstDayOfWeek(Calendar.SUNDAY)
+                .setPreselectedDate(towDaysAgo.getYear(), towDaysAgo.getMonthOfYear() - 1, towDaysAgo.getDayOfMonth())
+                .setDateRange(minDate, null)
+                .setDoneText("Yay")
+                .setCancelText("Nop")
+                .setThemeDark(true);
+        cdp.show(getSupportFragmentManager(), FRAG_TAG_DATE_PICKER);
+    }
+});
+```
+
+### Radial Time Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        RadialTimePickerDialogFragment rtpd = new RadialTimePickerDialogFragment()
+                .setOnTimeSetListener(SampleRadialTimeBasicUsage.this)
+                .setStartTime(10, 10)
+                .setDoneText("Yay")
+                .setCancelText("Nop")
+                .setThemeDark(true);
+        rtpd.show(getSupportFragmentManager(), FRAG_TAG_TIME_PICKER);
+    }
+});
+```
+ 
+### Recurrence Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        FragmentManager fm = getSupportFragmentManager();
+        Bundle bundle = new Bundle();
+        Time time = new Time();
+        time.setToNow();
+        bundle.putLong(RecurrencePickerDialogFragment.BUNDLE_START_TIME_MILLIS, time.toMillis(false));
+        bundle.putString(RecurrencePickerDialogFragment.BUNDLE_TIME_ZONE, time.timezone);
+        bundle.putString(RecurrencePickerDialogFragment.BUNDLE_RRULE, mRrule);
+        bundle.putBoolean(RecurrencePickerDialogFragment.BUNDLE_HIDE_SWITCH_BUTTON, true);
+        
+        RecurrencePickerDialogFragment rpd = new RecurrencePickerDialogFragment();
+        rpd.setArguments(bundle);
+        rpd.setOnRecurrenceSetListener(SampleRecurrenceBasicUsage.this);
+        rpd.show(fm, FRAG_TAG_RECUR_PICKER);
+    }
+});
+```
+
+### Timezone Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        FragmentManager fm = getSupportFragmentManager();
+        Bundle bundle = new Bundle();
+        Time time = new Time();
+        time.setToNow();
+        bundle.putLong(TimeZonePickerDialogFragment.BUNDLE_START_TIME_MILLIS, time.toMillis(false));
+        bundle.putString(TimeZonePickerDialogFragment.BUNDLE_TIME_ZONE, time.timezone);
+        bundle.putString(RecurrencePickerDialogFragment.BUNDLE_RRULE, mRrule);
+        
+        TimeZonePickerDialogFragment tzpd = new TimeZonePickerDialogFragment();
+        tzpd.setArguments(bundle);
+        tzpd.setOnTimeZoneSetListener(SampleTimeZoneBasicUsage.this);
+        tzpd.show(fm, FRAG_TAG_TIME_ZONE_PICKER);
+    }
+});
+```
+
+### Date Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        DatePickerBuilder dpb = new DatePickerBuilder()
+                .setFragmentManager(getSupportFragmentManager())
+                .setStyleResId(R.style.BetterPickersDialogFragment)
+                .setYearOptional(true);
+        dpb.show();
+    }
+});
+```
   
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-      // ...
-    }
-    
-    @Override
-    public void onDialogDateSet(int year, int monthOfYear, int dayOfMonth) {
-      // Do something with your date!
-    }
-  }
-  ```
+### Expiration Picker
 
-  2. Use one of the Builder classes to create a PickerDialog with a theme:
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        ExpirationPickerBuilder epb = new ExpirationPickerBuilder()
+                  .setFragmentManager(getSupportFragmentManager())
+                  .setStyleResId(R.style.BetterPickersDialogFragment) 
+                  .setMinYear(2000);
+        epb.show();
+    }
+});
+```
+ 
+### HMS Picker
 
-  ```java
-  DatePickerBuilder dpb = new DatePickerBuilder()
-      .setFragmentManager(getSupportFragmentManager())
-      .setStyleResId(R.style.BetterPickersDialogFragment);
-  dpb.show();
-  ```
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        HmsPickerBuilder hpb = new HmsPickerBuilder()
+                .setFragmentManager(getSupportFragmentManager())
+                .setStyleResId(R.style.BetterPickersDialogFragment);
+        hpb.show();
+    }
+});
+```
+
+### Number Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        NumberPickerBuilder npb = new NumberPickerBuilder()
+                .setFragmentManager(getSupportFragmentManager())
+                .setStyleResId(R.style.BetterPickersDialogFragment)
+                .setLabelText("LBS.");
+        npb.show();
+}
+});
+```
+
+### Time Picker
+
+```java
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        TimePickerBuilder tpb = new TimePickerBuilder()
+                .setFragmentManager(getSupportFragmentManager())
+                .setStyleResId(R.style.BetterPickersDialogFragment);
+        tpb.show();
+    }
+});
+```
 
 Theming
 =======
@@ -187,6 +244,16 @@ You can use your own themes if you'd like to change certain attributes.  BetterP
   dpb.show();
   ```
 
+Actionbarsherlock compatibility
+===============================
+If you use actionbarsherlock which is not compatible with appcompat-v7 you can use the latest version of the library on the 1.x.x branch.
+
+You can view the readme [here](README_1.6.0.md)
+
+ChangeLog
+=========
+Change log file is available [here](CHANGE_LOG.md)
+
 Contribution
 ============
 
@@ -196,19 +263,38 @@ Feel free to contribute to BetterPickers.
 
 If you've fixed a bug or have a feature you've added, just create a pull request.
 
-If you've found a bug, want a new feature, or have other questions, [file an issue][10]. I'll try to answer as soon as I find the time.
+If you've found a bug, want a new feature, or have other questions, [file an issue][10]. We will try to answer as soon as possible.
+
+
+### Applications using BetterPickers
+
+Please send a pull request if you would like to be added here.
+
+Icon | Application
+------------ | -------------
+<img src="https://lh6.ggpht.com/wG3RSgReZcIcKsqFfsKSibR-j1UYfOekNmtY8x0n0mjWJT84U2V3l2lh3TmxeXfJis0z=w300" width="48" height="48" /> | [Trello]
+<img src="https://lh3.ggpht.com/OuJF91ba0PiNItxw_zAqwjarenly_LiaeaPJQOHBrVWPsGzydjUZ1ANp1wVDpU4cLsE=w300" width="48" height="48" /> | [Navig'Tours] 
+<img src="https://lh3.googleusercontent.com/wgzBdz0-R999n1uo6qKJmIzPCt3ShM2lSM6oHmpz9HQKHhbuU0hGYwYhTJx_2QmAhic=w300" width="48" height="48" /> | [Sleep Well] 
+<img src="https://lh3.googleusercontent.com/h30IiTNjNayoas5zhbeE38ajB-rsW9Cpz-AOnZnBIuwoOVMMnKZxDQ1RYRLZYLW8Jxc=w300" width="48" height="48" /> | [Dayon Alarm] 
+
+
+
 
 Credits
 =======
+
+Thanks to [Derek Brameyer][15] for the initial version.
 
 Thanks to [JakeWharton][11] for his work on [ViewPagerIndicator][9].
 
 Thanks to [OAK][12] and [WillowTree Apps][13] for Maven assistance and possible future improvements.
 
+Thanks to all contributors !
+
 License
 =======
 
-    Copyright 2013 Derek Brameyer
+    Copyright 2013 Derek Brameyer, Code-Troopers
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -222,13 +308,18 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
- [5]: https://raw.github.com/derekbrameyer/android-betterpickers/master/sample/imagery/web_feature_graphic.png
+ [5]: https://raw.github.com/code-troopers/android-betterpickers/master/sample/imagery/web_feature_graphic.png
  [6]: https://play.google.com/store/apps/details?id=com.doomonafireball.betterpickers.sample
  [7]: http://developer.android.com/guide/developing/projects/projects-eclipse.html
  [8]: http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
  [9]: http://viewpagerindicator.com/
- [10]: https://github.com/derekbrameyer/android-betterpickers/issues/new
+ [10]: https://github.com/code-troopers/android-betterpickers/issues/new
  [11]: https://plus.google.com/108284392618554783657/posts
  [12]: http://willowtreeapps.github.io/OAK/
  [13]: http://www.willowtreeapps.com/
- [14]: https://github.com/derekbrameyer/android-betterpickers-gradle-sample
+ [15]: https://github.com/derekbrameyer/
+
+ [Trello]:https://play.google.com/store/apps/details?id=com.trello
+ [Navig'Tours]: https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours
+ [Sleep Well]: https://play.google.com/store/apps/details?id=com.processingbox.jevaisbiendormir
+ [Dayon Alarm]: https://play.google.com/store/apps/details?id=com.atesfactory.dayon
